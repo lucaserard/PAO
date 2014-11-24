@@ -1,6 +1,9 @@
 function plan = genPlan(X)
-  
- 
+	 
+  %plan est un vecteur de longueur 4 et X une matrice de taille nx3 
+  n=length(X);
+  X = [X ones(n,1)];	 
+
   cvx_begin
   variables plan(4,1)
   dual variables nul; 

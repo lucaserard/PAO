@@ -1,0 +1,15 @@
+function out = filtrePlan(source,pas,eps)
+  [n,p]=size(source);
+  
+  for i=1,n
+    for j=1,p
+	if(
+    end
+      
+  end
+  
+  
+	 
+
+	 
+end
