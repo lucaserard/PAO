@@ -1,0 +1,9 @@
+function v = echantillonnage(image,pas)
+[n,m]=size(image);
+v=[];
+for i=1:10:n
+    for j=1:10:m
+	v=[v;i j image(i,i)];
+    end
+end
+end

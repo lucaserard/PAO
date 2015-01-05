@@ -9,7 +9,7 @@ x=x+1;
 
 
 y=data(1:pas:n,2)/50-6920000/50;
-y=y +1;
+y=y+1;
 z=data(1:pas:n,3);
 
 
@@ -17,9 +17,13 @@ z=data(1:pas:n,3);
 %mat=[x(1:int64(n/4)) y(1:int64(n/4)) z(1:int64(n/4))];
 temp = [x y z];
 mat = fractionTerrain(temp);
-image = matriceNN(mat);
+image = matriceNN(temp);
+%xyz=toXYZ(image);
+xyz = echantillonnage(image,2);
+
+
 
 %xyz = filtrePlan(image,4,5);
 
-%save -text brotonne30.xyz mat
+save -text brotonne30.xyz xyz
 
